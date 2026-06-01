@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sob o Mesmo Céu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-overlay" class="login-screen">
+    <div class="login-box">
+        <div class="login-icon">🔒</div>
+        <h2>Apenas para os olhos de Rute...</h2>
+        <p>Insira a palavra-chave para abrir a caixinha.</p>
+        
+        <input type="password" id="password-input" placeholder="Qual é a senha?..." autofocus />
+        <button id="login-submit-btn">Abrir Presente</button>
+        <span id="login-error-msg" class="error-message"></span>
+    </div>
+</div>
+
+    <canvas id="sky-canvas"></canvas>
+
+    <header class="hero">
+        <div class="hero-layer">
+            <span class="hero-tag">Nossa Linha do Tempo</span>
+            <h1 class="hero-title">Você foi meu melhor encontro.</h1>
+            <p class="hero-date">24 de Fevereiro de 2020</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        
+<section class="widget-wrapper">
+    <div class="firefly-jar-wrapper">
+    <div class="firefly-jar" id="firefly-jar-btn">
+        <div class="jar-lid"></div>
+        <div class="jar-body">
+            <div class="jar-glow"></div>
+            <div class="inner-firefly"></div>
+            <div class="inner-firefly"></div>
+            <div class="inner-firefly"></div>
+        </div>
+    </div>
+    <span class="jar-label">Clique no pote para soltar um vagalume... ✨</span>
+</div>
+    <div class="mini-player">
+
+        <audio id="audio-track" src="assets/music/musicaa.mp3" preload="auto"></audio>
+
+        <div class="player-header-row">
+            <div class="player-disk">
+                <div class="disk-art">
+                    <img src="assets/musica.jpg" alt="Capa da música">
+                </div>
+            </div>
+
+            <div class="player-core">
+                <div class="track-meta">
+                    <span class="track-title">Until I Found You</span>
+                    <span class="track-artist">Sei que você gosta dessa... ❤️</span>
+                </div>
+
+                <div class="player-controls">
+                    <button class="btn-play-pause" id="global-play-btn" aria-label="Tocar música"></button>
+                    <div class="progress-timeline">
+                        <div class="progress-current" id="progress-bar" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="player-lyrics">
+            <p id="lyrics-text">Dê o play para abrir a caixinha de música... ❤️</p>
+        </div>
+
+    </div>
+</section>
+
+        <section class="widget-wrapper">
+            <div class="vintage-chronometer">
+                <p class="chrono-lead">Há quanto tempo nossas vidas se encontram:</p>
+                <div class="chrono-display">
+                    <div class="chrono-unit"><span id="c-years">00</span><label>Anos</label></div>
+                    <div class="chrono-sep">:</div>
+                    <div class="chrono-unit"><span id="c-months">00</span><label>Meses</label></div>
+                    <div class="chrono-sep">:</div>
+                    <div class="chrono-unit"><span id="c-days">00</span><label>Dias</label></div>
+                    <div class="chrono-sep">:</div>
+                    <div class="chrono-unit"><span id="c-hours">00</span><label>Horas</label></div>
+                    <div class="chrono-sep">:</div>
+                    <div class="chrono-unit"><span id="c-mins">00</span><label>Min</label></div>
+                    <div class="chrono-sep">:</div>
+                    <div class="chrono-unit"><span id="c-secs">00</span><label>Seg</label></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="widget-wrapper">
+            <div class="intensity-module">
+                <span class="widget-tag">Mapeamento de meus Sentimento</span>
+                <div class="gauge-display">
+                    <div class="gauge-track-bar">
+                        <div class="gauge-fill-bar" id="intensity-fill"></div>
+                    </div>
+                    <div class="gauge-metric" id="gauge-number">0%</div>
+                </div>
+                <p class="gauge-feedback" id="gauge-text">Pressione o botão abaixo para medir.</p>
+                <button class="wax-seal-trigger" id="measure-trigger" aria-label="Medir Sentimento">
+                    <span class="seal-core"></span>
+                </button>
+            </div>
+        </section>
+
+        <section class="carousel-module">
+    <div class="carousel-viewport" id="carousel-viewport">
+        <div class="carousel-track">
+            
+            <div class="polaroid-item tilt-l">
+                <div class="photo-container">
+                    <img src="assets/fotos/foto1.jpeg" alt="Foto 1">
+                </div>
+                <p class="polaroid-caption">Duas criança meu Deus</p>
+            </div>
+
+            <div class="polaroid-item tilt-r">
+                <div class="photo-container">
+                    <img src="assets/fotos/foto2.jpeg" alt="Foto 2">
+                </div>
+                <p class="polaroid-caption">Lindos</p>
+            </div>
+
+            <div class="polaroid-item tilt-s-l">
+                <div class="photo-container">
+                    <img src="assets/fotos/foto3.jpeg" alt="Foto 3">
+                </div> <p class="polaroid-caption">E fitness</p>
+            </div> <div class="polaroid-item tilt-s-r">
+                <div class="photo-container">
+                    <img src="assets/fotos/foto4.jpeg" alt="Foto 4">
+                </div>
+                <p class="polaroid-caption">Linda de tudo</p>
+            </div>
+
+            <div class="polaroid-item tilt-l">
+                <div class="photo-container">
+                    <img src="assets/fotos/foto5.jpeg" alt="Foto 5">
+                </div>
+                <p class="polaroid-caption">Nós.</p>
+            </div>
+
+            <div class="polaroid-item tilt-r">
+                <div class="photo-container">
+                    <img src="assets/fotos/foto6.jpeg" alt="Foto 6">
+                </div>
+                <p class="polaroid-caption">piniquepique</p>
+            </div>
+
+        </div> </div> </section>
+            <div class="carousel-nav-controls">
+                <button class="nav-arrow prev" id="prev-slide" aria-label="Anterior">&#x2039;</button>
+                <span class="nav-hint">Deslize</span>
+                <button class="nav-arrow next" id="next-slide" aria-label="Próximo">&#x203A;</button>
+            </div>
+        </section>
+        <section class="widget-wrapper">
+    <div class="blackout-romance-module" id="blackout-section">
+        <span class="widget-tag">Uma das minhas lembranças favoritas</span>
+        <h3 class="blackout-title-serif">Você lembra daquela noite?</h3>
+        
+        <div class="candle-trigger-zone" id="candle-trigger-container">
+            <button class="btn-candle-ignite" id="ignite-candle-btn" aria-label="Acender a lembrança">
+                <span class="candle-icon">🕯️</span>
+                <span class="candle-btn-text">Acender a lembrança</span>
+            </button>
+        </div>
+
+        <div class="candle-cinematic-scene" id="candle-scene">
+            <div class="candle-flame-wrapper">
+                <div class="candle-fire-glow"></div>
+                <div class="candle-wick"></div>
+            </div>
+            
+            <div class="blackout-narrative-prose">
+                <p class="narrative-line" id="line-1">Lembro do dia em que faltou energia.</p>
+                <p class="narrative-line" id="line-2">O escuro parecia um lugar bonito.</p>
+                <p class="narrative-line text-highlight-gold" id="line-3">Porque você estava lá.</p>
+                <p class="narrative-line" id="line-4">Nós dançamos uma valsa enquanto a cidade estava apagada.</p>
+                <p class="narrative-line italic-serif" id="line-5">No escuro eu sabia exatamente onde queria estar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="global-blackout-overlay" id="global-blackout-overlay"></div>
+
+        <section class="widget-wrapper">
+            <button class="btn-premium-action" id="open-achievements-btn">
+                <span class="btn-icon">🏆</span> Conquistas Desbloqueadas
+            </button>
+        </section>
+
+        <section class="widget-wrapper">
+            <div class="envelope-container" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-front-look">
+                    <div class="envelope-label">Para ler com calma...</div>
+                </div>
+                <div class="letter-sheet" id="letter-sheet">
+                    <h3 class="sheet-title">Minha Promessa</h3>
+                    <div class="sheet-body">
+                        <p>Se eu pudesse voltar no tempo, eu faria tudo ser mais belo, e com maior cautela possivel, sem permitir que nada me distanciasse de Deus, e nem de você.</p>
+                        <p>Porque algumas pessoas valem a espera. E você sempre valeu. Estar aqui hoje, sob este mesmo céu, é a prova viva de que Deus sabe costurar os nossos caminhos de volta.</p>
+                        <p>Você vale diversas vidas, diversos cultivos de jardins, regados com paciência no tempo para dar surgimento ao mais belo lírio.</p>
+                        <p>Você é como estrelas no céu, tão lindas, brilhantes e próximas de Deus. Te admiro profundamente, mesmo sendo aquela guria chata que conheci no ENJA</p>
+                        <p>Te amar é uma das bençãos mais profundas que Deus me concedeu, e eu prometo fazer jus a essa benção.</p>
+                    </div>
+                    <div class="sheet-signature">Com todo o meu carinho.</div>
+                    <div class="sheet-signature">De Thiago, para Tute.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="widget-wrapper">
+            <div class="time-capsule-lock">
+                <div class="lock-hardware">
+                    <div class="lock-shackle"></div>
+                    <div class="lock-body">
+                        <div class="lock-core"></div>
+                    </div>
+                </div>
+                <h3 class="capsule-title">Disponível em 2031</h3>
+                <div class="capsule-countdown">
+                    <div class="capsule-unit"><span id="cap-years">05</span><label>Anos</label></div>
+                    <div class="capsule-unit"><span id="cap-months">00</span><label>Meses</label></div>
+                    <div class="capsule-unit"><span id="cap-days">00</span><label>Dias</label></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cinematic-closure">
+            <div class="closure-glow-dot"></div>
+            <p class="closure-quote">Sempre fomos inevitáveis.</p>
+            <p class="closure-quote">Upendi!</p>
+        </section>
+
+    </main>
+
+    <div class="modal-overlay" id="achievements-modal">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h4>Galeria de Troféus</h4>
+                <button class="modal-close" id="close-achievements-btn">&times;</button>
+            </div>
+            <div class="modal-body-scroll">
+                <div class="trophy-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-details">
+                        <h6>Mestre dos encontros Improváveis</h6>
+                        <p>Capacidade única de cruzar caminhos criados por Deus.</p>
+                    </div>
+                </div>
+                <div class="trophy-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-details">
+                        <h6>Sobreviveu às idas e vindas da vida</h6>
+                        <p>Firmeza emocional que superou a distância e o tempo.</p>
+                    </div>
+                </div>
+                <div class="trophy-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-details">
+                        <h6>Transformadora de ambientes</h6>
+                        <p>A habilidade de transformar até viagens de onibus em momentos especiais.</p>
+                    </div>
+                </div>
+                <div class="trophy-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-details">
+                        <h6>Recordista de espaço ocupado no meu coração</h6>
+                        <p>Monopólio dos sentimentos e afetos.</p>
+                    </div>
+                </div>
+                <div class="trophy-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-details">
+                        <h6>Especialista em aparecer nos meus pensamentos</h6>
+                        <p>Invasões constantes no meio do dia.</p>
+                    </div>
+                </div>
+                <div class="trophy-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-details">
+                        <h6>Escritora das cartas que me fazem chorar</h6>
+                        <p>Dona da caligrafia e das palavras que me desarmam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="global-footer">
+        <p>Desenvolvido sob a luz da lua tão linda quanto você • 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
