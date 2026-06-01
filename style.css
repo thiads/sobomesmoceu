@@ -192,7 +192,7 @@ body {
 }
 
 .hero-tag {
-    font-size: 0.75rem;
+    font-size: 1.0rem;
     text-transform: uppercase;
     letter-spacing: 0.3em;
     color: var(--color-gold);
@@ -213,7 +213,7 @@ body {
 .hero-date {
     font-family: var(--font-serif);
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--color-rose);
 }
 
@@ -317,7 +317,7 @@ body {
 }
 
 .track-artist {
-    font-size: 0.72rem;
+    font-size: 0.90rem;
     color: rgba(214, 177, 126, 0.6); /* Dourado envelhecido romântico */
     margin-top: 2px;
 }
@@ -328,22 +328,25 @@ body {
     gap: 1rem;
 }
 
-/* Botão de Joia / Mecanismo de dar corda (Play/Pause) */
+/* Botão de Joia / Mecanismo de dar corda (Play/Pause) - DOURADO PREMIUM */
 .btn-play-pause {
-    width: 36px;
-    height: 36px;
+    width: 38px; /* Aumentado 2px para dar mais destaque e cliques fáceis no celular */
+    height: 38px;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #e1c298, #8c6265);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Gradiente mudado para ouro puro reluzente, combinando com a barra */
+    background: radial-gradient(circle at 35% 35%, #fff3db 0%, #e6c280 50%, #b8860b 100%);
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Borda mais clara para parecer reflexo de vidro */
     cursor: pointer;
     position: relative;
-    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
+    /* Sombra forte dourada + sombra escura de profundidade */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 8px rgba(214, 177, 126, 0.5);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
 }
 
-.btn-play-pause:hover {
+.btn-play-pause:hover, .btn-play-pause:active {
     transform: scale(1.08);
-    box-shadow: 0 0 14px rgba(214, 177, 126, 0.45);
+    /* Neon dourado intenso no foco/hover */
+    box-shadow: 0 0 18px #d6b17e, 0 0 6px #ffffff;
 }
 
 /* Ícone de Play (Triângulo) */
@@ -355,7 +358,7 @@ body {
     transform: translate(-50%, -50%);
     border-style: solid;
     border-width: 5px 0 5px 8px;
-    border-color: transparent transparent transparent #160c0e;
+    border-color: transparent transparent transparent #160c0e; /* Mantém o contraste escuro no centro do ouro */
     transition: all 0.2s ease;
 }
 
@@ -381,9 +384,9 @@ body {
 
 .progress-current {
     height: 100%;
-    background: linear-gradient(90deg, #d6b17e, #f5eedf);
+    background: linear-gradient(90deg, #c59b6c, #ffe5a3);
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(214, 177, 126, 0.6);
+    box-shadow: 0 0 14px rgba(214, 177, 126, 0.9);
     transition: width 0.1s linear; /* Movimento contínuo e suave */
 }
 
@@ -412,7 +415,7 @@ body {
 
 #lyrics-text {
     font-family: var(--font-serif), serif;
-    font-size: 0.85rem !important;
+    font-size: 1.0rem !important;
     font-style: italic !important;
     color: #d6b17e !important; /* Dourado suave de alto contraste contra a madeira */
     line-height: 1.4 !important;
