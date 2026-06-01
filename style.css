@@ -192,7 +192,7 @@ body {
 }
 
 .hero-tag {
-    font-size: 1.0rem;
+    font-size: 0.80rem;
     text-transform: uppercase;
     letter-spacing: 0.3em;
     color: var(--color-gold);
@@ -202,7 +202,7 @@ body {
 
 .hero-title {
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: 1.70rem;
     font-weight: 400;
     line-height: 1.4;
     color: var(--color-text-light);
@@ -213,12 +213,12 @@ body {
 .hero-date {
     font-family: var(--font-serif);
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--color-rose);
 }
 
 /* ==========================================================================
-   Mini Player: Caixinha de Música Romântica & Delicada
+   Mini Player: Caixinha de Música Romântica & Delicada - DOURADO PREMIUM VIVO
    ========================================================================== */
 .mini-player {
     display: flex;
@@ -229,8 +229,8 @@ body {
     -webkit-backdrop-filter: blur(10px);
     padding: 1.2rem;
     border-radius: 16px;
-    border: 2px solid rgba(214, 177, 126, 0.25); /* Bordas douradas finas tipo joia */
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6), 0 12px 28px rgba(0, 0, 0, 0.4);
+    border: 2px solid #d6b17e; /* Dourado sólido e nítido para emoldurar a caixa */
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(214, 177, 126, 0.15), 0 12px 28px rgba(0, 0, 0, 0.5); /* Sombra interna pesada + leve aura dourada externa */
     position: relative;
     overflow: hidden;
 }
@@ -240,8 +240,8 @@ body {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, transparent, #d6b17e, transparent);
-    opacity: 0.4;
+    background: linear-gradient(90deg, transparent, #ffe5a3, #d6b17e, transparent); /* Ponto de luz centralizado e aceso */
+    opacity: 0.8; /* Aumentado para o filete brilhar mais */
     pointer-events: none;
 }
 
@@ -262,8 +262,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px dashed rgba(214, 177, 126, 0.35); /* Efeito tracejado mecânico delicado */
-    box-shadow: 0 0 10px rgba(214, 177, 126, 0.1);
+    border: 2px dashed #e6c280; /* Tracejado em dourado vivo e aberto */
+    box-shadow: 0 0 12px rgba(230, 194, 128, 0.3); /* Brilho sutil ao redor do disco */
     position: relative;
     flex-shrink: 0;
 }
@@ -285,7 +285,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    filter: contrast(1.05) saturate(1.05);
+    filter: contrast(1.1) saturate(1.1); /* Leve ganho de contraste na foto */
 }
 
 /* Brilho central tipo vinil/engrenagem */
@@ -294,7 +294,7 @@ body {
     position: absolute;
     inset: 30%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(214, 177, 126, 0.3), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 243, 219, 0.6), transparent 70%); /* Ponto central iluminado em marfim aceso */
     pointer-events: none;
 }
 
@@ -310,16 +310,18 @@ body {
 
 .track-title {
     font-family: var(--font-serif), serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: #eaddca; /* Marfim clássico */
+    color: #ffffff; /* Branco puro para contraste máximo de leitura sobre o escuro */
     letter-spacing: 0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .track-artist {
     font-size: 0.90rem;
-    color: rgba(214, 177, 126, 0.6); /* Dourado envelhecido romântico */
+    color: #e6c280; /* Dourado médio nítido e super visível, sem opacidade apagada */
     margin-top: 2px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .player-controls {
@@ -330,23 +332,20 @@ body {
 
 /* Botão de Joia / Mecanismo de dar corda (Play/Pause) - DOURADO PREMIUM */
 .btn-play-pause {
-    width: 38px; /* Aumentado 2px para dar mais destaque e cliques fáceis no celular */
+    width: 38px;
     height: 38px;
     border-radius: 50%;
-    /* Gradiente mudado para ouro puro reluzente, combinando com a barra */
-    background: radial-gradient(circle at 35% 35%, #fff3db 0%, #e6c280 50%, #b8860b 100%);
-    border: 1px solid rgba(255, 255, 255, 0.4); /* Borda mais clara para parecer reflexo de vidro */
+    background: radial-gradient(circle at 35% 35%, #ffffff 0%, #ffe5a3 30%, #d6b17e 70%, #9c723e 100%); /* Gradiente de ouro polido com ponto de luz puro branca */
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Borda cristalina forte */
     cursor: pointer;
     position: relative;
-    /* Sombra forte dourada + sombra escura de profundidade */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 8px rgba(214, 177, 126, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 0 0 10px rgba(214, 177, 126, 0.4); /* Dupla sombra: profundidade escura + brilho dourado */
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
 }
 
 .btn-play-pause:hover, .btn-play-pause:active {
     transform: scale(1.08);
-    /* Neon dourado intenso no foco/hover */
-    box-shadow: 0 0 18px #d6b17e, 0 0 6px #ffffff;
+    box-shadow: 0 0 20px #ffe5a3, 0 0 8px #ffffff; /* Efeito "aceso" e reluzente ao passar o mouse */
 }
 
 /* Ícone de Play (Triângulo) */
@@ -354,11 +353,11 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    left: 55%; /* Centralização óptica milimétrica do triângulo */
+    left: 55%;
     transform: translate(-50%, -50%);
     border-style: solid;
     border-width: 5px 0 5px 8px;
-    border-color: transparent transparent transparent #160c0e; /* Mantém o contraste escuro no centro do ouro */
+    border-color: transparent transparent transparent #160c0e; /* Contraste preto mecânico no centro da joia */
     transition: all 0.2s ease;
 }
 
@@ -376,18 +375,19 @@ body {
 .progress-timeline {
     flex-grow: 1;
     height: 4px;
-    background-color: rgba(214, 177, 126, 0.1);
+    background-color: rgba(13, 7, 8, 0.8); /* Fundo quase preto para isolar e dar contraste total à barra acesa */
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .progress-current {
     height: 100%;
-    background: linear-gradient(90deg, #c59b6c, #ffe5a3);
+    background: linear-gradient(90deg, #b8860b, #e6c280, #ffe5a3); /* Gradiente de ouro envelhecido até ouro reluzente */
     border-radius: 10px;
-    box-shadow: 0 0 14px rgba(214, 177, 126, 0.9);
-    transition: width 0.1s linear; /* Movimento contínuo e suave */
+    box-shadow: 0 0 12px #ffe5a3, 0 0 4px #ffffff; /* Brilho de "fio incandescente" aceso */
+    transition: width 0.1s linear;
 }
 
 /* Animação de Rotação Graciosa do Disco */
@@ -397,7 +397,7 @@ body {
 }
 
 .mini-player.playing .disk-art {
-    animation: spinDisk 5s linear infinite; /* Rotação ligeiramente mais lenta e suave de caixinha */
+    animation: spinDisk 5s linear infinite;
 }
 
 /* Seção da Legenda Sorteada */
@@ -409,7 +409,7 @@ body {
     justify-content: center !important;
     text-align: center !important;
     width: 100% !important;
-    border-top: 1px dashed rgba(214, 177, 126, 0.15); /* Linha pontilhada estilosa */
+    border-top: 1px dashed #d6b17e; /* Linha tracejada agora é dourada visível */
     padding-top: 0.7rem;
 }
 
@@ -417,13 +417,14 @@ body {
     font-family: var(--font-serif), serif;
     font-size: 1.0rem !important;
     font-style: italic !important;
-    color: #d6b17e !important; /* Dourado suave de alto contraste contra a madeira */
+    color: #ffe5a3 !important; /* Dourado champanhe claro para leitura imediata e elegante */
     line-height: 1.4 !important;
     display: block !important;
     opacity: 1 !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Sombra preta forte atrás do texto para destacar as letras */
     transition: opacity 0.2s ease-in-out;
 }
+
 
 /* ==========================================================================
    Cronômetro Digital Premium (Compacto & Alinhado)
