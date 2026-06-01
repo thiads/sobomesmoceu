@@ -523,7 +523,7 @@ body {
 .gauge-feedback {
     font-family: var(--font-serif);
     font-style: italic;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--color-text-muted);
     margin-bottom: 1.25rem;
     min-height: 22px;
@@ -1093,7 +1093,7 @@ body {
 
 .capsule-title {
     font-family: var(--font-serif);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--color-text-light);
     margin-bottom: 0.75rem;
 }
@@ -1418,7 +1418,7 @@ body.in-blackout .blackout-romance-module {
 /* Texto abaixo do pote */
 .jar-label {
     font-family: var(--font-serif), serif;
-    font-size: 0.75rem;
+    font-size: 0.81rem;
     font-style: italic;
     color: rgba(214, 177, 126, 0.6);
     text-align: center;
